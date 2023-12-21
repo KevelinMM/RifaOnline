@@ -1,14 +1,22 @@
 import React, { useState } from "react";
+import Sidebar from "./Sidebar";
 
 export default function NavBar() {
   const [showSidebar, setShowSidebar] = useState(false);
+  const [showBackdrop, setShowBackdrop] = useState(false);
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
+    setShowBackdrop(!showBackdrop);
+  };
+
+  const closeSidebar = () => {
+    setShowSidebar(false);
+    setShowBackdrop(false);
   };
 
   return (
-    <header className="header" id="header">
+    <header className="header">
       <div className="logo_header">
         <svg
           width="120"
@@ -134,68 +142,47 @@ export default function NavBar() {
             fill="#EDF0F3"
           />
         </svg>
-      </div>
-      <button onClick={toggleSidebar} className="btn_icon_header">
-        <svg
-          width="25"
-          height="24"
-          viewBox="0 0 25 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3.96448 12H21.9645"
-            stroke="#EDF0F3"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M3.96448 6H21.9645"
-            stroke="#EDF0F3"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M3.96448 18H21.9645"
-            stroke="#EDF0F3"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>{" "}
-      </button>
-
-      <div className="navigation_header">
+      </div>{" "}
+      <div className="itens_header">
+        <button className="buttonBuy" href="#">
+          Comprar número
+        </button>{" "}
+        {showBackdrop && (
+          <div className="backdrop" onClick={closeSidebar}></div>
+        )}
         <button onClick={toggleSidebar} className="btn_icon_header">
           <svg
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
+            width="25"
+            height="24"
+            viewBox="0 0 25 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M21 7L7 21"
-              stroke="#D9D9D9"
+              d="M3.96448 12H21.9645"
+              stroke="#EDF0F3"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
             />
             <path
-              d="M7 7L21 21"
-              stroke="#D9D9D9"
+              d="M3.96448 6H21.9645"
+              stroke="#EDF0F3"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
             />
-          </svg>
+            <path
+              d="M3.96448 18H21.9645"
+              stroke="#EDF0F3"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>{" "}
         </button>
-        <a href="#">Início</a>
-        <a href="#">Como funciona?</a>
-        <a href="#">Prêmio</a> <button href="#">Comprar número</button>
       </div>
+      <Sidebar show={showSidebar} closeSidebar={closeSidebar} />
     </header>
   );
 }

@@ -2,6 +2,7 @@
   --color-white: #fff;
   --color-text: #edf0f3;
   --color-button: #47a4f9;
+  --color-form: #9A9A9A;
 }
 
 html,
@@ -130,12 +131,24 @@ body {
     right: 0;
   }
 
-  .buttonBuy_sidebar {
+  .button_buy_sidebar {
     align-items: center;
     background: var(--color-button);
     border: none;
     border-radius: 50px;
     color: var(----color-text);
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    width: 258px;
+  }
+
+  .button_cancel_sidebar{
+    border: 0.757px solid #edf0f3;
+    border-radius: 50px;
+    color: var(----color-text);
+    align-items: center;
+    background: transparent;
     display: flex;
     height: 44px;
     justify-content: center;
@@ -295,6 +308,52 @@ body {
     line-height: normal;
   }
 
-  .students_img {
+
+  /* FORMULÁRIO SIDEBAR */
+
+  .form_sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form_main_data{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form_style {
+    padding: 0 28px ;
+  }
+
+  .address_style{
+    display: flex;
+    gap: 10px;
+  }
+
+  .form_sidebar input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: var(--color--text);
+    outline: none;
+    padding-bottom: 10px;
+    width: 70vw;
+  }
+
+  .form_sidebar label {
+    color: var(--color-form);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  .form_footer{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 40px;
+    padding-top: 60px;
   }
 }

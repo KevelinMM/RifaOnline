@@ -176,7 +176,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         </ul>
       </div>
       <div className="sidebar_itens">
-        <button className="buttonBuy_sidebar">Comprar número</button>
+        <button className="button_buy_sidebar">Comprar número</button>
 
         <div className="detail_sidebar">
           <svg

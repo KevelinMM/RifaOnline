@@ -1,7 +1,7 @@
 import Head from "next/head";
 import NavBar from "./components/Header";
 import Home from "./components/Home";
-import Numbers from "./components/BuyNumbers";
+import Numbers from "./components/NumbersList";
 
 export default function Index() {
   return (

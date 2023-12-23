@@ -31,24 +31,52 @@ export default function About() {
 
   return (
     <div className="content">
-      <div className="helpStudents">
-        {/* Your SVG and heading */}
-      </div>
+      <div className="helpStudents">{/* Your SVG and heading */}</div>
       {sections.map((section, index) => (
         <List className="helpStudents" key={index}>
           <div className="about">
             <div className="collapse" onClick={() => handleClick(index)}>
               <h4>{section.title}</h4>
               {openSections[index] ? (
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <circle cx="14" cy="14" r="14" transform="rotate(-180 14 14)" fill="#47A4F9"/>
-                <path d="M18.5637 15.7185L14.0004 11.1758L9.43712 15.7185" stroke="#0A294C" stroke-width="1.67421" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                >
+                  <circle
+                    cx="14"
+                    cy="14"
+                    r="14"
+                    transform="rotate(-180 14 14)"
+                    fill="#47A4F9"
+                  />
+                  <path
+                    d="M18.5637 15.7185L14.0004 11.1758L9.43712 15.7185"
+                    stroke="#0A294C"
+                    stroke-width="1.67421"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-  <circle cx="14" cy="14" r="14" fill="#47A4F9"/>
-  <path d="M9.4364 12.2812L13.9997 16.8239L18.563 12.2812" stroke="#0A294C" stroke-width="1.67421" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                >
+                  <circle cx="14" cy="14" r="14" fill="#47A4F9" />
+                  <path
+                    d="M9.4364 12.2812L13.9997 16.8239L18.563 12.2812"
+                    stroke="#0A294C"
+                    stroke-width="1.67421"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               )}
             </div>
             <Collapse in={openSections[index]} timeout="auto" unmountOnExit>

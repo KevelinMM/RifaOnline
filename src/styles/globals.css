@@ -411,7 +411,32 @@ html {
 
   }
 
-  .icon_about{
+  .icon_about {
     background-color: #1c232b;
+  }
+
+
+  /* FOOTER */
+
+  footer{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 24px;
+ padding-bottom: 32px;
+ padding-top: 32px;
+  }
+
+  .footerLinks {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footerLinks a {
+    color: var(--color-text);
+    font-size: 12px;
+    font-weight: 400;
+
   }
 }

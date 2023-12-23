@@ -406,6 +406,16 @@ html {
     padding-top: 60px;
   }
 
+  /* ESTILO DOS STEPS NO FORMS */
+
+  .MuiStepLabel-label {
+    color: white !important;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20.8px;
+  }
+
   /* ABOUT */
 
   .about {

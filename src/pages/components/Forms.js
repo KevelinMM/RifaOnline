@@ -170,7 +170,7 @@ const Forms = ({ show, closeSidebar }) => {
               <button onClick={handleNext} className="button_buy_sidebar">
                 Concluir
               </button>
-              <button className="button_cancel_sidebar">Cancelar</button>
+              <button onClick={closeSidebarForm} className="button_cancel_sidebar">Cancelar</button>
             </div>
           </div>
         )}

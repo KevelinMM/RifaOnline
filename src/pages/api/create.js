@@ -3,10 +3,7 @@ import prisma from "../../../libs/prisma";
 
 export default async function handler(req, res) {
   const body = req.body;
-  // ligica
-  // Buscar se o CPF ja existe.
-  // se ja existir somente associar o numero a pessoa,
-  // se não existe cria a pessoa e associa o numero
+
 
   // Verificar se todos os numero solicitados estão disponiveis
   for (let i = 0; i < body.numerosId.length; i++) {
@@ -27,6 +24,7 @@ export default async function handler(req, res) {
 
   let pessoaId;
 
+  // Buscar se o CPF ja existe.
   const getPessoa = await prisma.pessoa.findUnique({
     where: { cpfCnpj: body.cpfCnpj },
   });

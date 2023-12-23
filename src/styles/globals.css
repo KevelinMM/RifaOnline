@@ -254,12 +254,13 @@ html {
   .number_list_background {
     background: #395A80;
     filter: blur(120px);
-    width: 1065px;
     height: 700px;
     position: absolute;
-    z-index: 1;
     right: 200px;
     top: 45%;
+    width: 1065px;
+    z-index: 1;
+
 
   }
 
@@ -273,42 +274,51 @@ html {
   }
 
   .numbers_content {
-    flex-shrink: 0;
-    border-radius: 10px;
     background: #1f2832;
+    border-radius: 10px;
+    flex-shrink: 0;
     padding: 20px;
+
   }
 
   .numbers {
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    padding: 0;
     padding-bottom: 20px;
+
   }
 
   .numbers li {
-    margin: 5px;
-    width: calc(20% - 10px);
-    text-align: center;
-    color: var(--color-text);
-    border-radius: 9.34px;
-    padding: 5.604px 15.559px 6.351px 16px;
-    justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    border-radius: 9.34px;
+    color: var(--color-text);
+    justify-content: center;
+    margin: 5px;
+    padding: 5.604px 15.559px 6.351px 16px;
+    text-align: center;
+    width: calc(20% - 10px);
   }
 
   .numbers_available {
-    border: 1.868px solid #395a80;
+    align-items: center;
+    border: 2px solid #395a80;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
   }
 
   .numbers_unvailable {
+    align-items: center;
+    border: 2px solid #62686F;
     cursor: not-allowed;
+    display: flex;
+    justify-content: center;
     opacity: 0.6;
     pointer-events: none;
-    border: 2px solid #62686F;
+
   }
 
   .button_number {
@@ -333,18 +343,20 @@ html {
 
   .numbers_description {
     color: #62686f;
-    text-align: right;
     font-family: Rubik;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-align: right;
+
   }
 
   .studens_img {
-    width: 100%;
-    height: 100%;
     flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+
   }
 
 
@@ -373,7 +385,6 @@ html {
     font-style: normal;
     font-weight: 300;
     line-height: 22px;
-    /* 157.143% */
   }
 
   .address_style {
@@ -419,6 +430,8 @@ html {
   /* ABOUT */
 
   .about {
+    background: #1F2832;
+    border-radius: 8.371px;
     color: #EDF0F3;
     font-family: Rubik;
     font-size: 14px;
@@ -426,8 +439,7 @@ html {
     font-weight: 300;
     line-height: 22px;
     padding: 12px;
-    border-radius: 8.371px;
-    background: #1F2832;
+
   }
 
   .about h4 {
@@ -438,9 +450,10 @@ html {
   }
 
   .collapse {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
 
   }
 

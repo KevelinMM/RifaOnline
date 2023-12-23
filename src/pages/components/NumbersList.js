@@ -40,7 +40,7 @@ export default function Numbers() {
           number.disponivel ? "numbers_available" : "numbers_unvailable"
         }
       >
-        {number.numero}
+        {number.disponivel ?  number.numero : "X"}
       </li>
     ));
   };

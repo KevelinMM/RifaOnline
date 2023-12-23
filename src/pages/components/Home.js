@@ -1,8 +1,11 @@
 export default function Home() {
   return (
+    <>
+    
+    <div className="home_background"> </div>
     <div className="content">
       {" "}
-      <div className="homeBackground"> </div>
+    
       <div className="helpStudents">
         <svg
           width="69"
@@ -238,7 +241,7 @@ export default function Home() {
           </svg>
         </div>
       </div>
-      <div className="studentBackground"> </div>
+  
       <div className="helpStudents">
         <svg
           width="58"
@@ -268,5 +271,8 @@ export default function Home() {
         <button className="buttonBlue premiumButton">Comprar número</button>
       </div>
     </div>
+    <div className="home_background_tv"> </div>
+    </>
+  
   );
 }

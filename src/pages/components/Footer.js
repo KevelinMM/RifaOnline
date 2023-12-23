@@ -1,7 +1,8 @@
 export default function Footer() {
   return (
     <footer>
-      <div>
+      <div className="footer_background"> </div>
+      <div className="footer_logo">
         <svg
           width="120"
           height="30"
@@ -127,7 +128,7 @@ export default function Footer() {
           />
         </svg>
       </div>{" "}
-      <div className="footerLinks">
+      <div className="footer_links">
         <a>Inicio</a>
         <a>Como funciona?</a>
         <a>Prêmio</a>

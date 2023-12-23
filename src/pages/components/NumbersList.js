@@ -34,7 +34,11 @@ export default function Numbers() {
 
   return (
     <div>
+
+<div className="number_list_background"> </div>
       <div className="content">
+
+
         <div className="buy">
           <h2>
             Compre seu número por apenas <span className="price">R$5,00</span>

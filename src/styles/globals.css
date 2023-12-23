@@ -171,31 +171,30 @@ html {
 
   /* HOME */
 
-  .homeBackground {
-    background: #395a80;
-    border-radius: 532.5px;
-    filter: blur(90px);
-    flex-shrink: 0;
-    height: 1065px;
-    left: -63em;
-    position: fixed;
-    top: -12em;
-    width: 1065px;
+  .home_background {
+    background: #395A80;
+    filter: blur(125px);
+    width: 729px;
+    height: 500px;
+    left: -600px;
+    position: absolute;
     z-index: 1;
   }
 
-  .studentBackground {
-    background: #395a80;
-    border-radius: 532.5px;
-    filter: blur(90px);
-    flex-shrink: 0;
-    height: 1065px;
-    position: fixed;
-    right: -60em;
-    top: 20em;
-    width: 1065px;
+  .home_background_tv {
+    background: #395A80;
+    filter: blur(125px);
+    width: 2000px;
+    height: 500px;
+    right: -2000px;
+    top: 20%;
+    position: absolute;
     z-index: 1;
   }
+
+
+
+
 
   .buttonsHome {
     display: flex;
@@ -248,7 +247,19 @@ html {
     margin-top: 12px;
   }
 
-  /* BUY */
+  /* NUMBERLIST */
+
+  .number_list_background {
+    background: #395A80;
+    filter: blur(120px);
+    width: 1065px;
+    height: 700px;
+    position: absolute;
+    z-index: 1;
+    right: 200px;
+    top: 45%;
+
+  }
 
   .buy {
     position: relative;
@@ -418,25 +429,41 @@ html {
 
   /* FOOTER */
 
-  footer{
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- gap: 24px;
- padding-bottom: 32px;
- padding-top: 32px;
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+
   }
 
-  .footerLinks {
+  .footer_links {
     display: flex;
     gap: 24px;
+    z-index: 2;
   }
 
-  .footerLinks a {
+  .footer_logo {
+    display: flex;
+    z-index: 2;
+  }
+
+  .footer_links a {
     color: var(--color-text);
     font-size: 12px;
     font-weight: 400;
 
+  }
+
+  .footer_background {
+    background: #395A80;
+    filter: blur(125px);
+    width: 600px;
+    height: 218px;
+    position: absolute;
+    z-index: 1;
   }
 }

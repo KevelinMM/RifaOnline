@@ -21,7 +21,7 @@ const sections = [
 ];
 
 export default function About() {
-  const [openSections, setOpenSections] = useState(sections.map(() => true));
+  const [openSections, setOpenSections] = useState(sections.map(() => false));
 
   const handleClick = (index) => {
     const newOpenSections = [...openSections];
@@ -30,8 +30,8 @@ export default function About() {
   };
 
   return (
-    <div className="content">
-      <div className="helpStudents">{/* Your SVG and heading */}</div>
+    <div id="info" className="content">
+      <div className="helpStudents"></div>
       {sections.map((section, index) => (
         <List className="helpStudents" key={index}>
           <div className="about">

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
-import Forms from "./Forms";
+import BuyNumber from "./BuyButton";
 
 export default function NavBar() {
   const [showSidebar, setShowSidebar] = useState(false);
-  const [showForms, setShowForms] = useState(false);
   const [showBackdrop, setShowBackdrop] = useState(false);
 
   const toggleSidebar = () => {
@@ -14,17 +13,8 @@ export default function NavBar() {
 
   const closeSidebar = () => {
     setShowSidebar(false);
-    setShowForms(false);
     setShowBackdrop(false);
   };
-
-  
-  const toggleForm = () => {
-    setShowForms(!showForms);
-    setShowBackdrop(!showBackdrop);
-  };
-
-  
 
   return (
     <header className="header">
@@ -155,9 +145,7 @@ export default function NavBar() {
         </svg>
       </div>{" "}
       <div className="itens_header">
-        <button  onClick={toggleForm} className="buttonBuy" href="#">
-          Comprar número
-        </button>{" "}
+        <BuyNumber />
         {showBackdrop && (
           <div className="backdrop" onClick={closeSidebar}></div>
         )}
@@ -194,7 +182,6 @@ export default function NavBar() {
         </button>
       </div>
       <Sidebar show={showSidebar} closeSidebar={closeSidebar} />
-      <Forms show={showForms} closeSidebar={closeSidebar} />
     </header>
   );
 }

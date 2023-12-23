@@ -1,9 +1,22 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Forms from "./Forms";
 
 export default function Numbers() {
   const [numberList, setNumberList] = useState([]);
+  const [numberSelect, setNumberSelect] = useState(false);
+  const [showBackdrop, setShowBackdrop] = useState(false);
+  const [showForms, setShowForms] = useState(false);
+
+  const closeSidebar = () => {
+    setShowForms(false);
+    setShowBackdrop(false);
+  };
+  const toggleForm = () => {
+    setShowForms(!showForms);
+    setShowBackdrop(!showBackdrop);
+  };
 
   useEffect(() => {
     const fetchNumbers = async () => {
@@ -11,7 +24,7 @@ export default function Numbers() {
         console.log(process.env.BACKEND);
         const response = await axios.get(process.env.BACKEND + "read");
         setNumberList(response.data);
-        console.log(response);
+        //console.log(response);
       } catch (error) {
         console.error(error);
       }
@@ -34,11 +47,10 @@ export default function Numbers() {
 
   return (
     <div>
-
-<div className="number_list_background"> </div>
+      <div id="buy" className="number_list_background">
+        {" "}
+      </div>
       <div className="content">
-
-
         <div className="buy">
           <h2>
             Compre seu número por apenas <span className="price">R$5,00</span>
@@ -53,9 +65,22 @@ export default function Numbers() {
             <li className="numbers">{renderNumberList()}</li>
 
             <div className="numbers_footer">
-              <button className="button_number">
-                Nenhum número(s) selecionado(s)
-              </button>
+              {numberSelect ? (
+                <button className="button_number">
+                  Nenhum número(s) selecionado(s)
+                </button>
+              ) : (
+                <button onClick={toggleForm} className="button_buy_sidebar">
+                  Avançar
+                </button>
+              )}
+
+              {showBackdrop && (
+                <div className="backdrop" onClick={closeSidebar}></div>
+              )}
+
+              <Forms show={showForms} closeSidebar={closeSidebar} />
+
               <p className="numbers_description">
                 *Selecione quantos números desejar
               </p>

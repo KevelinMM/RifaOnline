@@ -1,24 +1,41 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+
+
+const steps = ["DADOS PESSOAIS", "CONCLUÍDO"];
 
 const Forms = ({ show, closeSidebar }) => {
   const sidebarStyles = {
-    width: "80%",
+    width: "85%",
     heigth: "100%",
     backgroundColor: "#1F2832",
     position: "fixed",
     overflowY: "auto",
     maxHeight: "100vh",
   };
+
   const [value, setValue] = React.useState("pessoal");
 
   const handleChange = (event) => {
     setValue(event.target.value);
+  };
+
+  const [activeStep, setActiveStep] = React.useState(0);
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 2);
+  };
+
+  const closeSidebarForm = () => {
+    setActiveStep(0);
+    closeSidebar();
   };
 
   return (
@@ -55,74 +72,108 @@ const Forms = ({ show, closeSidebar }) => {
         </button>
       </div>{" "}
       <div className="form_style">
-        <p>DADOS PESSOAIS</p>
       
-          <Box className="form_sidebar" component="form" autoComplete="off">
-            <div className="form_main_data">
-              <TextField label="Insira seu nome" variant="standard" />
-              <TextField label="Insira seu e-mail" variant="standard" />
-              <TextField
-                type="number"
-                label="Insira seu telefone"
-                variant="standard"
-              />
-            </div>
-            <div className="address_style">
-              <TextField
-                label="Insira seu CEP"
-                type="number"
-                variant="standard"
-              />
-              <TextField label="Bairro" variant="standard" />
-            </div>
-            <div className="address_style">
-              <TextField label="Insira sua rua" variant="standard" />
-              <TextField label="Número" type="number" variant="standard" />
-            </div>
-            <div className="address_style">
-              <TextField label="Insira sua cidade" variant="standard" />
-              <TextField label="UF" variant="standard" />
-            </div>
-          </Box>
+          <Stepper activeStep={activeStep}>
+            {steps.map((label, index) => {
+              const stepProps = {};
+              const labelProps = {};
 
-          <FormControl>
-            <RadioGroup value={value} onChange={handleChange}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  paddingTop: "28px",
-                }}
-              >
-                <FormControlLabel
-                  value="pessoal"
-                  control={<Radio />}
-                  label="Pessoal"
-                />
-                <FormControlLabel
-                  value="empresa"
-                  control={<Radio />}
-                  label="Empresa"
+              return (
+                <Step key={label} {...stepProps}>
+                  <StepLabel {...labelProps}>{label}</StepLabel>
+                </Step>
+              );
+            })}
+          </Stepper>
+      
+      </div>
+      <div>
+        {activeStep === steps.length ? (
+          <div>
+            <div className="form_style">
+              <p>
+                Obrigado por ser parte deste capítulo importante na vida dos
+                alunos. Cada passo dado em direção ao objetivo é possível graças
+                a pessoas incríveis como você.
+              </p>
+            </div>
+
+            <div className="form_footer">
+              <button onClick={closeSidebarForm} className="button_buy_sidebar">
+                Fechar
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="form_style">
+            <div className="form_sidebar" component="form" autoComplete="off">
+              <div className="form_main_data">
+                <TextField label="Insira seu nome" variant="standard" />
+                <TextField label="Insira seu e-mail" variant="standard" />
+                <TextField
+                  type="number"
+                  label="Insira seu telefone"
+                  variant="standard"
                 />
               </div>
-            </RadioGroup>
-          </FormControl>
+              <div className="address_style">
+                <TextField
+                  label="Insira seu CEP"
+                  type="number"
+                  variant="standard"
+                />
+                <TextField label="Bairro" variant="standard" />
+              </div>
+              <div className="address_style">
+                <TextField label="Insira sua rua" variant="standard" />
+                <TextField label="Número" type="number" variant="standard" />
+              </div>
+              <div className="address_style">
+                <TextField label="Insira sua cidade" variant="standard" />
+                <TextField label="UF" variant="standard" />
+              </div>
+            </div>
 
-          <TextField
-            className="form_sidebar"
-            type="number"
-            label="Insira seu CPF/CNPJ"
-            variant="standard"
-          />
-      
+            <FormControl>
+              <RadioGroup value={value} onChange={handleChange}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    paddingTop: "28px",
+                  }}
+                >
+                  <FormControlLabel
+                    value="pessoal"
+                    control={<Radio />}
+                    label="Pessoal"
+                  />
+                  <FormControlLabel
+                    value="empresa"
+                    control={<Radio />}
+                    label="Empresa"
+                  />
+                </div>
+              </RadioGroup>
+            </FormControl>
 
-        <h4>NÚMEROS SELECIONADOS</h4>
+            <TextField
+              className="form_sidebar"
+              type="number"
+              label="Insira seu CPF/CNPJ"
+              variant="standard"
+            />
 
-    
-      </div>
-      <div className="form_footer">
-        <button className="button_buy_sidebar">Concluir</button>
-        <button className="button_cancel_sidebar">Cancelar</button>
+            <h4>NÚMEROS SELECIONADOS</h4>
+
+            <div className="form_footer">
+              <button onClick={handleNext} className="button_buy_sidebar">
+                Concluir
+              </button>
+              <button className="button_cancel_sidebar">Cancelar</button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

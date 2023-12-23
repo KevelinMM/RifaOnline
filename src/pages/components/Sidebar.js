@@ -2,10 +2,22 @@ import React from "react";
 
 const Sidebar = ({ show, closeSidebar }) => {
   const sidebarStyles = {
-    width: "80%",
-    heigth: "100%",
+    width: "85%",
+    height: "100%",
     backgroundColor: "#1F2832",
     position: "fixed",
+  };
+
+  const handleNavLinkClick = (event, targetId) => {
+    event.preventDefault();
+    closeSidebar();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
   return (
@@ -166,17 +178,22 @@ const Sidebar = ({ show, closeSidebar }) => {
       </div>
       <div className="list_sidebar">
         <ul>
-          <a href="#">Início</a>
+          <a onClick={(e) => handleNavLinkClick(e, "connect")}>Início</a>
         </ul>
         <ul>
-          <a href="#">Como funciona?</a>
+          <a onClick={(e) => handleNavLinkClick(e, "info")}>Como funciona?</a>
         </ul>
         <ul>
-          <a href="#">Prêmio</a>
+          <a onClick={(e) => handleNavLinkClick(e, "premio")}>Prêmio</a>
         </ul>
       </div>
       <div className="sidebar_itens">
-        <button className="button_buy_sidebar">Comprar número</button>
+        <div
+          className="button_buy_sidebar"
+          onClick={(e) => handleNavLinkClick(e, "buy")}
+        >
+          Comprar número
+        </div>
 
         <div className="detail_sidebar">
           <svg

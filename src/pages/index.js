@@ -2,6 +2,7 @@ import Head from "next/head";
 import NavBar from "./components/Header";
 import Home from "./components/Home";
 import Numbers from "./components/NumbersList";
+import About from "./components/About";
 
 export default function Index() {
   return (
@@ -21,7 +22,7 @@ export default function Index() {
 
       <div className="homePage">
         <NavBar /> <Home />
-        <Numbers />
+        <Numbers /> <About/>
       </div>
     </>
   );

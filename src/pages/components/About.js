@@ -79,7 +79,7 @@ export default function About() {
                 </svg>
               )}
             </div>
-            <Collapse in={openSections[index]} timeout="auto" unmountOnExit>
+            <Collapse in={openSections[index]} timeout="0" unmountOnExit>
               <List component="div" disablePadding>
                 <p>{section.content}</p>
               </List>

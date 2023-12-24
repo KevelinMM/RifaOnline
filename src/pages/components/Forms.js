@@ -299,7 +299,7 @@ const Forms = ({ show, closeSidebar, selectedNumbers, resetNumbers }) => {
 
             <h4>NÚMEROS SELECIONADOS</h4>
             <ul className="numbers">
-              {selectedNumbers.map((num, index) => (
+              {selectedNumbers && selectedNumbers.map((num, index) => (
                 <li className="numbers_available" key={index}>
                   {num}
                 </li>
@@ -308,7 +308,7 @@ const Forms = ({ show, closeSidebar, selectedNumbers, resetNumbers }) => {
 
             <div className="price">
               <div>Valor</div>
-              <div>R${selectedNumbers.length * 5},00</div>
+              <div>R${selectedNumbers && selectedNumbers.length * 5},00</div>
             </div>
 
             {error && <p>Erro ao comprar, tente novamente mais tarde.</p>}

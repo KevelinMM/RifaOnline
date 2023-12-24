@@ -5,9 +5,10 @@ import Forms from "./Forms";
 
 export default function Numbers() {
   const [numberList, setNumberList] = useState([]);
-  const [numberSelect, setNumberSelect] = useState(false);
+  const [numberSelect, setNumberSelect] = useState(true);
   const [showBackdrop, setShowBackdrop] = useState(false);
   const [showForms, setShowForms] = useState(false);
+  const [selectedNumbers, setSelectedNumbers] = useState([]);
 
   const closeSidebar = () => {
     setShowForms(false);
@@ -21,10 +22,8 @@ export default function Numbers() {
   useEffect(() => {
     const fetchNumbers = async () => {
       try {
-        console.log(process.env.BACKEND);
         const response = await axios.get(process.env.BACKEND + "read");
         setNumberList(response.data);
-        //console.log(response);
       } catch (error) {
         console.error(error);
       }
@@ -32,15 +31,29 @@ export default function Numbers() {
     fetchNumbers();
   }, []);
 
+  async function handleNumberClick(number) {
+    setNumberSelect(false);
+
+    if (selectedNumbers.includes(number)) {
+      setSelectedNumbers(selectedNumbers.filter((num) => num !== number));
+    } else {
+      setSelectedNumbers([...selectedNumbers, number]);
+    }
+  }
+
   const renderNumberList = () => {
     return numberList.map((number) => (
       <li
         key={number.id}
+        onClick={() => handleNumberClick(number.numero
+          
+          
+          )}
         className={
           number.disponivel ? "numbers_available" : "numbers_unvailable"
         }
       >
-        {number.disponivel ?  number.numero : "X"}
+        {number.disponivel ? number.numero : "X"}
       </li>
     ));
   };
@@ -63,6 +76,20 @@ export default function Numbers() {
             </div>
 
             <li className="numbers">{renderNumberList()}</li>
+            <div>
+              <p>Números selecionados:</p>
+              <ul className="numbers">
+                {selectedNumbers.map((num, index) => (
+                  <li
+                    onClick={() => handleNumberClick(num)}
+                    key={index}
+                    className="numbers_available"
+                  >
+                    {num}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div className="numbers_footer">
               {numberSelect ? (

@@ -1,4 +1,14 @@
 export default function Footer() {
+  const handleNavLinkClick = (event, targetId) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <>
 
@@ -131,9 +141,9 @@ export default function Footer() {
           </svg>
         </div>{" "}
         <div className="footer_links">
-          <a>Inicio</a>
-          <a>Como funciona?</a>
-          <a>Prêmio</a>
+          <a onClick={(e) => handleNavLinkClick(e, "connect")} >Inicio</a>
+          <a onClick={(e) => handleNavLinkClick(e, "info")} >Como funciona?</a>
+          <a onClick={(e) => handleNavLinkClick(e, "premio")}>Prêmio</a>
         </div>
       </footer>
     </>

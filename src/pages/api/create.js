@@ -4,6 +4,7 @@ import prisma from "../../../libs/prisma";
 export default async function handler(req, res) {
   const body = req.body;
 
+  console.log(body);
 
   // Verificar se todos os numero solicitados estão disponiveis
   for (let i = 0; i < body.numerosId.length; i++) {
@@ -24,14 +25,15 @@ export default async function handler(req, res) {
 
   let pessoaId;
 
-  // Buscar se o CPF ja existe.
+  //Verifica se o usuário ja existe pelo ceu CPF ou CNPJ, ,ou seja, se já realizou uma compra.
   const getPessoa = await prisma.pessoa.findUnique({
     where: { cpfCnpj: body.cpfCnpj },
   });
+  //Se existe, associa a compra o usuário
   if (getPessoa) {
     pessoaId = getPessoa.id;
   } else {
-    //Criando pessoa
+    //Se não, cria o usuário
     const newPessoa = await prisma.pessoa.create({
       data: {
         nome: body.nome,
@@ -39,18 +41,18 @@ export default async function handler(req, res) {
         cpfCnpj: body.cpfCnpj,
         telefone: body.telefone,
         email: body.email,
-        cep: body.cep,
-        bairro: body.bairro,
-        rua: body.rua,
-        numeroRua: body.numeroRua,
-        cidade: body.cidade,
-        uf: body.uf,
+        cep: body.cep || "",
+        bairro: body.bairro || "",
+        rua: body.rua || "",
+        numeroRua: body.numeroRua || "",
+        cidade: body.cidade || "",
+        uf: body.uf || "",
       },
     });
     pessoaId = newPessoa.id;
   }
 
-  // Associar o numero da rifa a pessoa
+  // Associar o número da rifa a pessoa
   for (let i = 0; i < body.numerosId.length; i++) {
     await prisma.numeros.update({
       where: {

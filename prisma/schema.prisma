@@ -20,7 +20,7 @@ model Pessoa {
   cep        String
   bairro     String
   rua        String
-  numeroRua  Int
+  numeroRua  String
   cidade     String
   uf         String
   numeros    Numeros[]

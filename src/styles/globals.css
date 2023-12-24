@@ -13,14 +13,11 @@ body {
   color: var(--color-text);
   font-family: Rubik;
   overflow-x: hidden;
-}
-
-body,
-html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 
 .header {
@@ -28,7 +25,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 18px 12px 28px 12px;
+  padding: 20px;
 }
 
 .navigation_header a {
@@ -38,7 +35,7 @@ html {
 }
 
 .content {
-  padding: 0.9em;
+  padding: 20px;
   transition: 1s;
   display: flex;
   flex-direction: column;
@@ -118,7 +115,7 @@ html {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 35px 12px;
+    margin: 25px 12px;
     padding-left: 15px;
   }
 
@@ -139,6 +136,7 @@ html {
     height: auto;
     position: fixed;
     right: 0;
+
   }
 
   .button_buy_sidebar {
@@ -151,6 +149,7 @@ html {
     height: 44px;
     justify-content: center;
     width: 258px;
+    margin-top: 10px;
   }
 
   .button_cancel_sidebar {
@@ -194,14 +193,11 @@ html {
     z-index: 1;
   }
 
-
-
-
-
-  .buttonsHome {
+  .buttons_home {
     display: flex;
-    justify-content: space-between;
-    padding: 0 6px;
+    gap: 15px;
+    justify-content: center;
+    padding-top: 10px;
   }
 
   .studentCard {
@@ -269,9 +265,20 @@ html {
     z-index: 20;
   }
 
-  .price {
-    color: #47a4f9;
+  .buy_numbers_home {
+    color: var(----color-text);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
   }
+
+  .buy_numbers_home span {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 100%;
+    padding-top: 12px;
+  }
+
 
   .numbers_content {
     background: #1f2832;
@@ -286,7 +293,6 @@ html {
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    padding-bottom: 20px;
 
   }
 
@@ -308,6 +314,7 @@ html {
     cursor: pointer;
     display: flex;
     justify-content: center;
+
   }
 
   .numbers_unvailable {
@@ -325,7 +332,6 @@ html {
     display: flex;
     width: 283px;
     height: 44px;
-    padding: 16px 18px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -339,6 +345,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 16px 18px;
   }
 
   .numbers_description {
@@ -365,17 +372,18 @@ html {
   .form_sidebar {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 15px;
   }
 
   .form_main_data {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 15px;
+    margin-top: 14px;
   }
 
   .form_style {
-    padding: 0 28px;
+    padding: 0 26px;
   }
 
   .form_style p {
@@ -385,6 +393,13 @@ html {
     font-style: normal;
     font-weight: 300;
     line-height: 22px;
+  }
+
+  .form_style h4{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 29px;
   }
 
   .address_style {
@@ -408,14 +423,43 @@ html {
     font-weight: 300;
   }
 
+  .price {
+    display: flex;
+    justify-content: space-between;
+    color: #47A4F9;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 25px;
+    padding-top: 6px;
+
+  }
+
+
+  .sucess_mensage {
+    display: flex;
+    gap: 16px;
+    padding-top: 35px;
+    align-items: center;
+
+  }
+
+  .sucess_mensage p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22.5px;
+    padding-right: 30px;
+  }
+
   .form_footer {
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-bottom: 40px;
-    padding-top: 60px;
+    padding-bottom: 25px;
   }
+
+
 
   /* ESTILO DOS STEPS NO FORMS */
 

@@ -42,7 +42,7 @@ export default function Home() {
                 inesquecível.
               </p>
             </div>
-            <div className="buttonsHome">
+            <div className="buttons_home">
               <BuyNumber />
               <a  onClick={(e) => handleNavLinkClick(e, "premio")} className="buttonTransparent">Sobre a rifa</a>
             </div>

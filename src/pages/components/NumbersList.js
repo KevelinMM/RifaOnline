@@ -5,7 +5,6 @@ import Forms from "./Forms";
 
 export default function Numbers() {
   const [numberList, setNumberList] = useState([]);
-  const [numberSelect, setNumberSelect] = useState(true);
   const [showBackdrop, setShowBackdrop] = useState(false);
   const [showForms, setShowForms] = useState(false);
   const [selectedNumbers, setSelectedNumbers] = useState([]);
@@ -32,8 +31,6 @@ export default function Numbers() {
   }, []);
 
   async function handleNumberClick(number) {
-    setNumberSelect(false);
-
     if (selectedNumbers.includes(number)) {
       setSelectedNumbers(selectedNumbers.filter((num) => num !== number));
     } else {
@@ -45,10 +42,7 @@ export default function Numbers() {
     return numberList.map((number) => (
       <li
         key={number.id}
-        onClick={() => handleNumberClick(number.numero
-          
-          
-          )}
+        onClick={() => handleNumberClick(number.numero)}
         className={
           number.disponivel ? "numbers_available" : "numbers_unvailable"
         }
@@ -65,9 +59,9 @@ export default function Numbers() {
       </div>
       <div className="content">
         <div className="buy">
-          <h2>
+          <div className="buy_numbers_home">
             Compre seu número por apenas <span className="price">R$5,00</span>
-          </h2>
+          </div>
 
           <div className="numbers_content">
             <div className="description">
@@ -76,29 +70,32 @@ export default function Numbers() {
             </div>
 
             <li className="numbers">{renderNumberList()}</li>
-            <div>
-              <p>Números selecionados:</p>
-              <ul className="numbers">
-                {selectedNumbers.map((num, index) => (
-                  <li
-                    onClick={() => handleNumberClick(num)}
-                    key={index}
-                    className="numbers_available"
-                  >
-                    {num}
-                  </li>
-                ))}
-              </ul>
-            </div>
+
+            {selectedNumbers.length > 0 && (
+              <div>
+                <p>Números selecionados:</p>
+                <ul className="numbers">
+                  {selectedNumbers.map((num, index) => (
+                    <li
+                      onClick={() => handleNumberClick(num)}
+                      key={index}
+                      className="numbers_available"
+                    >
+                      {num}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="numbers_footer">
-              {numberSelect ? (
-                <button className="button_number">
-                  Nenhum número(s) selecionado(s)
-                </button>
-              ) : (
+              {selectedNumbers.length > 0 ? (
                 <button onClick={toggleForm} className="button_buy_sidebar">
                   Avançar
+                </button>
+              ) : (
+                <button className="button_number">
+                  Nenhum número(s) selecionado(s)
                 </button>
               )}
 
@@ -106,7 +103,11 @@ export default function Numbers() {
                 <div className="backdrop" onClick={closeSidebar}></div>
               )}
 
-              <Forms show={showForms} closeSidebar={closeSidebar} />
+              <Forms
+                show={showForms}
+                closeSidebar={closeSidebar}
+                selectedNumbers={selectedNumbers}
+              />
 
               <p className="numbers_description">
                 *Selecione quantos números desejar

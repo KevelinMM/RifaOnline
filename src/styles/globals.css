@@ -407,7 +407,7 @@ a {
     color: var(--color--text);
     outline: none;
     padding-bottom: 10px;
-    width: 70vw;
+    width: 80vw;
   }
 
   .form_sidebar label {

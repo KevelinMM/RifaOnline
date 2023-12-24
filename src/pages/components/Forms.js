@@ -8,6 +8,7 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import axios from "axios";
+import InputMask from "react-input-mask";
 
 const steps = ["DADOS PESSOAIS", "CONCLUÍDO"];
 
@@ -76,7 +77,7 @@ const Forms = ({ show, closeSidebar, selectedNumbers, resetNumbers }) => {
       });
 
       setActiveStep((prevActiveStep) => prevActiveStep + 2);
-      resetNumbers()
+      resetNumbers();
     } catch (error) {
       console.log(error);
       setMissingInfo(false);
@@ -195,27 +196,43 @@ const Forms = ({ show, closeSidebar, selectedNumbers, resetNumbers }) => {
                     style: commonInputStyle,
                   }}
                 />
-                <TextField
-                  label="Insira seu telefone"
-                  variant="standard"
-                  required
-                  InputProps={{
-                    style: commonInputStyle,
-                  }}
+
+                <InputMask
+                  mask="(99) 99999-9999"
+                  value={telefone}
                   onChange={(e) => setTelefone(e.target.value)}
-                  type="number"
-                />
+                >
+                  {() => (
+                    <TextField
+                      label="Insira seu telefone"
+                      variant="standard"
+                      required
+                      InputProps={{
+                        style: commonInputStyle,
+                      }}
+                      type="tel"
+                    />
+                  )}
+                </InputMask>
               </div>
               <div className="address_style">
-                <TextField
-                  label="Insira seu CEP"
-                  type="number"
-                  variant="standard"
-                  InputProps={{
-                    style: commonInputStyle,
-                  }}
+                <InputMask
+                  mask="99999-999"
+                  value={cep}
                   onChange={(e) => setCep(e.target.value)}
-                />
+                >
+                  {() => (
+                    <TextField
+                      label="Insira seu CEP"
+                      variant="standard"
+                      required
+                      InputProps={{
+                        style: commonInputStyle,
+                      }}
+                      type="tel"
+                    />
+                  )}
+                </InputMask>
                 <TextField
                   label="Bairro"
                   variant="standard"
@@ -285,25 +302,28 @@ const Forms = ({ show, closeSidebar, selectedNumbers, resetNumbers }) => {
               </div>
             </RadioGroup>
 
-            <TextField
-              label="Insira seu CPF/CNPJ"
-              variant="standard"
-              InputProps={{
-                style: commonInputStyle,
-              }}
-              required
-              className="form_sidebar"
-              type="number"
-              onChange={(e) => setCpfCnpj(e.target.value)}
-            />
+            <div className="form_sidebar">
+              {" "}
+              <TextField
+                label="Insira seu CPF/CNPJ"
+                variant="standard"
+                InputProps={{
+                  style: commonInputStyle,
+                }}
+                required
+                type="number"
+                onChange={(e) => setCpfCnpj(e.target.value)}
+              />{" "}
+            </div>
 
             <h4>NÚMEROS SELECIONADOS</h4>
             <ul className="numbers">
-              {selectedNumbers && selectedNumbers.map((num, index) => (
-                <li className="numbers_available" key={index}>
-                  {num}
-                </li>
-              ))}
+              {selectedNumbers &&
+                selectedNumbers.map((num, index) => (
+                  <li className="numbers_available" key={index}>
+                    {num}
+                  </li>
+                ))}
             </ul>
 
             <div className="price">

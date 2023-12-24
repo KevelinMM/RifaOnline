@@ -18,15 +18,21 @@ export default function Numbers() {
     setShowBackdrop(!showBackdrop);
   };
 
+  function resetNumbers() {
+    setSelectedNumbers([]);
+    fetchNumbers();
+  }
+
+  const fetchNumbers = async () => {
+    try {
+      const response = await axios.get(process.env.BACKEND + "read");
+      setNumberList(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
-    const fetchNumbers = async () => {
-      try {
-        const response = await axios.get(process.env.BACKEND + "read");
-        setNumberList(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
     fetchNumbers();
   }, []);
 
@@ -60,7 +66,7 @@ export default function Numbers() {
       <div className="content">
         <div className="buy">
           <div className="buy_numbers_home">
-            Compre seu número por apenas <span className="price">R$5,00</span>
+            Compre seu número por apenas <span>R$5,00</span>
           </div>
 
           <div className="numbers_content">
@@ -107,6 +113,7 @@ export default function Numbers() {
                 show={showForms}
                 closeSidebar={closeSidebar}
                 selectedNumbers={selectedNumbers}
+                resetNumbers={resetNumbers}
               />
 
               <p className="numbers_description">

@@ -11,7 +11,7 @@ import axios from "axios";
 
 const steps = ["DADOS PESSOAIS", "CONCLUÍDO"];
 
-const Forms = ({ show, closeSidebar, selectedNumbers }) => {
+const Forms = ({ show, closeSidebar, selectedNumbers, resetNumbers }) => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [telefone, setTelefone] = useState("");
@@ -54,6 +54,7 @@ const Forms = ({ show, closeSidebar, selectedNumbers }) => {
   //Finalizando a compra dos números escolhidos
   async function handleFinish() {
     setError(false);
+    setMissingInfo(false);
     try {
       if (!nome || !email || !telefone || !cpfCnpj) {
         setMissingInfo(true);
@@ -75,8 +76,10 @@ const Forms = ({ show, closeSidebar, selectedNumbers }) => {
       });
 
       setActiveStep((prevActiveStep) => prevActiveStep + 2);
+      resetNumbers()
     } catch (error) {
       console.log(error);
+      setMissingInfo(false);
       setError(true);
     }
   }
@@ -132,7 +135,6 @@ const Forms = ({ show, closeSidebar, selectedNumbers }) => {
         {activeStep === steps.length ? (
           <div className="form_style">
             <div className="sucess_mensage">
-              {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -304,16 +306,16 @@ const Forms = ({ show, closeSidebar, selectedNumbers }) => {
               ))}
             </ul>
 
+            <div className="price">
+              <div>Valor</div>
+              <div>R${selectedNumbers.length * 5},00</div>
+            </div>
+
             {error && <p>Erro ao comprar, tente novamente mais tarde.</p>}
 
             {missingInfo && (
               <p>Por favor, preencha todos os campos obrigatórios. *</p>
             )}
-
-            <div className="price">
-              <div>Valor</div>
-              <div>R${selectedNumbers.length * 5},00</div>
-            </div>
 
             <div className="form_footer">
               <button onClick={handleFinish} className="button_buy_sidebar">

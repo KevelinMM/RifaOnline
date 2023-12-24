@@ -49,9 +49,9 @@ export default function Numbers() {
       <li
         key={number.id}
         onClick={() => handleNumberClick(number.numero)}
-        className={
+        className={`${
           number.disponivel ? "numbers_available" : "numbers_unvailable"
-        }
+        } ${selectedNumbers.includes(number.id) ? "numbers_selected" : ""}`}
       >
         {number.disponivel ? number.numero : "X"}
       </li>
@@ -77,27 +77,10 @@ export default function Numbers() {
 
             <li className="numbers">{renderNumberList()}</li>
 
-            {selectedNumbers.length > 0 && (
-              <div>
-                <p>Números selecionados:</p>
-                <ul className="numbers">
-                  {selectedNumbers.map((num, index) => (
-                    <li
-                      onClick={() => handleNumberClick(num)}
-                      key={index}
-                      className="numbers_available"
-                    >
-                      {num}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
             <div className="numbers_footer">
               {selectedNumbers.length > 0 ? (
                 <button onClick={toggleForm} className="button_buy_sidebar">
-                  Avançar
+                  Comprar número(s) selecionados
                 </button>
               ) : (
                 <button className="button_number">

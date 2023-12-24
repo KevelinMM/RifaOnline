@@ -143,18 +143,18 @@ body {
     align-items: center;
     background: var(--color-button);
     border: none;
-    border-radius: 50px;
+    border-radius: 100px;
     color: var(----color-text);
     display: flex;
     height: 44px;
     justify-content: center;
     width: 258px;
-    margin-top: 10px;
+
   }
 
   .button_cancel_sidebar {
     border: 0.757px solid #edf0f3;
-    border-radius: 50px;
+    border-radius: 100px;
     color: var(----color-text);
     align-items: center;
     background: transparent;
@@ -256,8 +256,6 @@ body {
     top: 45%;
     width: 1065px;
     z-index: 1;
-
-
   }
 
   .buy {
@@ -322,17 +320,19 @@ body {
     justify-content: center;
     opacity: 0.6;
     pointer-events: none;
+  }
 
+  .numbers_selected {
+    align-items: center;
+    border: var(--color-button);
+    display: flex;
+    justify-content: center;
+     background-color: var(--color-button);
   }
 
   .button_number {
-    display: flex;
     width: 283px;
     height: 44px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
     border-radius: 100px;
     background: #62686f;
     border: none;

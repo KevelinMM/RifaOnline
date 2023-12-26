@@ -14,7 +14,7 @@ export default function BuyNumber() {
   };
 
   return (
-    <a onClick={(e) => handleCompraClick(e, "buy")} className="buttonBlue">
+    <a onClick={(e) => handleCompraClick(e, "buy")} className="button_blue">
       Comprar número
     </a>
   );

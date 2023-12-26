@@ -33,7 +33,7 @@ export default function About() {
     <div id="info" className="content">
       <div className="helpStudents"></div>
       {sections.map((section, index) => (
-        <List className="helpStudents" key={index}>
+        <List className="help_students" key={index}>
           <div className="about">
             <div className="collapse" onClick={() => handleClick(index)}>
               <h4>{section.title}</h4>

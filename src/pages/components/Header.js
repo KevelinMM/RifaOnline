@@ -16,9 +16,21 @@ export default function NavBar() {
     setShowBackdrop(false);
   };
 
+  const handleNavLinkClick = (event, targetId) => {
+    event.preventDefault();
+    closeSidebar();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <header className="header">
-      <div className="logo_header">
+      <div>
         <svg
           width="120"
           height="30"
@@ -143,44 +155,59 @@ export default function NavBar() {
             fill="#EDF0F3"
           />
         </svg>
-      </div>{" "}
-      <div className="itens_header">
-        <BuyNumber />
-        {showBackdrop && (
-          <div className="backdrop" onClick={closeSidebar}></div>
-        )}
-        <button onClick={toggleSidebar} className="btn_icon_header">
-          <svg
-            width="25"
-            height="24"
-            viewBox="0 0 25 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3.96448 12H21.9645"
-              stroke="#EDF0F3"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M3.96448 6H21.9645"
-              stroke="#EDF0F3"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M3.96448 18H21.9645"
-              stroke="#EDF0F3"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>{" "}
-        </button>
       </div>
+
+      <div className="itens_header">
+        <div className="links_header">
+          <ul>
+            <a onClick={(e) => handleNavLinkClick(e, "connect")}>Início</a>
+          </ul>
+          <ul>
+            <a onClick={(e) => handleNavLinkClick(e, "info")}>Como funciona?</a>
+          </ul>
+          <ul>
+            <a onClick={(e) => handleNavLinkClick(e, "premio")}>Prêmio</a>
+          </ul>
+        </div>
+        <div className="itens_header">
+          <BuyNumber />
+          {showBackdrop && (
+            <div className="backdrop" onClick={closeSidebar}></div>
+          )}
+          <button onClick={toggleSidebar} className="btn_icon_header">
+            <svg
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.96448 12H21.9645"
+                stroke="#EDF0F3"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M3.96448 6H21.9645"
+                stroke="#EDF0F3"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M3.96448 18H21.9645"
+                stroke="#EDF0F3"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
       <Sidebar show={showSidebar} closeSidebar={closeSidebar} />
     </header>
   );

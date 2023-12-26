@@ -107,6 +107,7 @@ export default function Numbers() {
         </div>{" "}
       </div>{" "}
       <img className="studens_img" src="students.png"></img>
+      <img className="studens_img_pc" src="students-pc.png"></img>
     </div>
   );
 }

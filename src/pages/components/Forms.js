@@ -37,7 +37,6 @@ const Forms = ({ show, closeSidebar, selectedNumbers, resetNumbers }) => {
     maxHeight: "100vh",
   };
 
-
   const commonInputStyle = {
     color: "white",
     background: "transparent",

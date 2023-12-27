@@ -60,9 +60,12 @@ export default function Numbers() {
 
   return (
     <div>
-      <div id="buy" className="number_list_background">
+
+      <img src="rectangle-numbers-list.png" className="rectangle_number_list"></img>
+
+      <div id="buy">
         {" "}
-      </div>
+  
       <div className="content">
         <div className="buy">
           <div className="buy_numbers_home">
@@ -108,6 +111,7 @@ export default function Numbers() {
       </div>{" "}
       <img className="studens_img" src="students.png"></img>
       <img className="studens_img_pc" src="students-pc.png"></img>
+      </div>
     </div>
   );
 }

@@ -29,8 +29,8 @@ export default function NavBar() {
   };
 
   return (
-    <header className="header">
-      <div>
+    <header >
+      <div className="logo_header">
         <svg
           width="120"
           height="30"
@@ -157,20 +157,21 @@ export default function NavBar() {
         </svg>
       </div>
 
+
       <div className="itens_header">
         <div className="links_header">
           <ul>
             <a onClick={(e) => handleNavLinkClick(e, "connect")}>Início</a>
           </ul>
           <ul>
-            <a onClick={(e) => handleNavLinkClick(e, "info")}>Como funciona?</a>
+            <a onClick={(e) => handleNavLinkClick(e, "about")}>Como funciona?</a>
           </ul>
           <ul>
             <a onClick={(e) => handleNavLinkClick(e, "premio")}>Prêmio</a>
           </ul>
-        </div>
+        </div><BuyNumber />
         <div className="itens_header">
-          <BuyNumber />
+          
           {showBackdrop && (
             <div className="backdrop" onClick={closeSidebar}></div>
           )}

@@ -14,6 +14,7 @@ const handleNavLinkClick = (event, targetId) => {
 export default function Home() {
   return (
     <>
+    <img src="rectangle-home.png" className="retangle_home"></img >
       <div className="content">
         {" "}
         <div className="help_students">
@@ -45,7 +46,7 @@ export default function Home() {
                 <br></br>
                 <BuyNumber />
                 <a
-                  onClick={(e) => handleNavLinkClick(e, "premio")}
+                  onClick={(e) => handleNavLinkClick(e, "about")}
                   className="button_transparent"
                 >
                   Sobre a rifa
@@ -431,7 +432,7 @@ export default function Home() {
 
         <div id="premio" className="help_students">
           {" "}
-          <div className="tv_image">
+          <div   className="tv_image">
             <img src="tv.png"></img>
           </div>
           

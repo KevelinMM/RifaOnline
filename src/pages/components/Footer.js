@@ -11,9 +11,7 @@ export default function Footer() {
   };
   return (
     <>
-
-      <div className="footer_background"> </div>
-      <footer className="content">
+      <footer>
         <div className="footer_logo">
           <svg
             width="120"
@@ -141,10 +139,15 @@ export default function Footer() {
           </svg>
         </div>{" "}
         <div className="footer_links">
-          <a onClick={(e) => handleNavLinkClick(e, "connect")} >Inicio</a>
-          <a onClick={(e) => handleNavLinkClick(e, "info")} >Como funciona?</a>
+          <a onClick={(e) => handleNavLinkClick(e, "connect")}>Inicio</a>
+          <a onClick={(e) => handleNavLinkClick(e, "about")}>Como funciona?</a>
           <a onClick={(e) => handleNavLinkClick(e, "premio")}>Prêmio</a>
         </div>
+        <img src="rectangle-footer.png" className="rectangle_footer"></img>
+        <img
+          src="rectangle-footer.png"
+          className="rectangle_footer_mobile"
+        ></img>
       </footer>
     </>
   );

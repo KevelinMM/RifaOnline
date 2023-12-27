@@ -181,7 +181,7 @@ const Sidebar = ({ show, closeSidebar }) => {
           <a onClick={(e) => handleNavLinkClick(e, "connect")}>Início</a>
         </ul>
         <ul>
-          <a onClick={(e) => handleNavLinkClick(e, "info")}>Como funciona?</a>
+          <a onClick={(e) => handleNavLinkClick(e, "about")}>Como funciona?</a>
         </ul>
         <ul>
           <a onClick={(e) => handleNavLinkClick(e, "premio")}>Prêmio</a>

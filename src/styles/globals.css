@@ -3,7 +3,8 @@
   --color-text: #edf0f3;
   --color-button: #47a4f9;
   --color-form: #9A9A9A;
-  --color-background: #1F2832;
+  --color-background: #1C232B;
+  --color-cards: #1F2832;
 }
 
 html,
@@ -20,14 +21,22 @@ body {
 a {
   text-decoration: none;
   color: var(--color--text);
+  cursor: pointer;
 }
 
-.header {
+header {
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 3rem 9%;
+  padding: 3rem 7%;
+position: relative;
+z-index: 110;
+}
+
+.logo_header {
+  position: relative;
+  z-index: 2;
 }
 
 .itens_header {
@@ -35,18 +44,22 @@ a {
   gap: 20px;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .links_header {
   display: flex;
 }
 
-
-
 /* HOME PAGE */
 
+.retangle_home {
+  position: absolute;
+  top: 0;
+}
+
 .content {
-  padding: 20px 9%;
+  padding: 20px 7%;
   transition: 1s;
   display: flex;
   flex-direction: column;
@@ -62,15 +75,13 @@ a {
 
 .info_home {
   width: 423px;
-  height: 307px;
+  height: 200px;
 }
 
 .student_card {
-  position: relative;
-  width: 100%;
   display: flex;
   justify-content: end;
-  height: 400px;
+  height: 380px;
   padding-top: 8.5em;
 }
 
@@ -84,8 +95,8 @@ a {
 
 .banner_background_img {
   display: flex;
-  height: 320px;
-  z-index: 5;
+  height: 330px;
+  z-index: 4;
   background-color: var(--color-background);
 }
 
@@ -98,8 +109,8 @@ a {
 .detail_home {
   position: absolute;
   z-index: 1;
-  margin-top: 17.5em;
-  margin-left: 21.5em;
+  margin-top: 18.2em;
+  margin-right: -2.5em;
 }
 
 .detail_home_mobile {
@@ -115,7 +126,8 @@ a {
   max-width: 90%;
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0 0;
+
 }
 
 .btn_icon_header {
@@ -155,6 +167,12 @@ a {
 /*NUMBERS LIST */
 
 
+.rectangle_number_list {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .number_list_background {
   background: #395A80;
   filter: blur(120px);
@@ -169,6 +187,7 @@ a {
 .buy {
   position: relative;
   z-index: 20;
+  padding-bottom: 5em;
 }
 
 .buy_numbers_home {
@@ -184,11 +203,14 @@ a {
 
 
 .numbers_content {
-  background: #1f2832;
+  background: var(--color-cards);
   border-radius: 10px;
   flex-shrink: 0;
-  padding: 20px;
-  margin: 10px;
+  padding: 25px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .numbers {
@@ -196,7 +218,7 @@ a {
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  justify-content: center;
+  justify-content: start;
 
 }
 
@@ -210,6 +232,7 @@ a {
   padding: 5px 18px 6px 18px;
   text-align: center;
   width: calc(5% - 10px);
+  display: flex;
 }
 
 .numbers_available {
@@ -254,6 +277,18 @@ a {
   padding: 16px 18px;
 }
 
+.button_buy_sidebar {
+  align-items: center;
+  background: var(--color-button);
+  border: none;
+  border-radius: 100px;
+  color: var(----color-text);
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  width: 258px;
+}
+
 .numbers_description {
   color: #62686f;
   font-family: Rubik;
@@ -278,13 +313,23 @@ a {
 
 /* ABOUT */
 
+.header_about {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3em;
+}
+
 .about {
-  background: #1F2832;
+  background: var(--color-cards);
   border-radius: 8.371px;
   font-weight: 300;
   line-height: 22px;
   padding: 12px;
   width: 100%;
+  position: relative;
+  z-index: 10;
+
+
 
 }
 
@@ -316,12 +361,14 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 24px;
+  padding: 35px;
 }
 
 .footer_links {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   z-index: 2;
+
 }
 
 .footer_logo {
@@ -335,13 +382,13 @@ footer {
   font-weight: 400;
 }
 
-.footer_background {
-  background: #395A80;
-  filter: blur(130px);
-  width: 100%;
-  height: 200px;
+.rectangle_footer {
   position: absolute;
-  z-index: 1;
+  width: 100%;
+}
+
+.rectangle_footer_mobile {
+  display: none;
 }
 
 
@@ -405,21 +452,9 @@ footer {
     height: auto;
     position: fixed;
     right: 0;
-
   }
 
-  .button_buy_sidebar {
-    align-items: center;
-    background: var(--color-button);
-    border: none;
-    border-radius: 100px;
-    color: var(----color-text);
-    display: flex;
-    height: 44px;
-    justify-content: center;
-    width: 258px;
 
-  }
 
   .button_cancel_sidebar {
     border: 0.757px solid #edf0f3;
@@ -440,7 +475,6 @@ footer {
   }
 
   /* HOME */
-
 
   .buttons_home {
     display: flex;
@@ -518,13 +552,11 @@ footer {
     z-index: 1;
   }
 
-
-
   .buy {
     position: relative;
     z-index: 20;
+    padding-bottom: 1em;
   }
-
 
   .numbers {
     display: flex;
@@ -662,7 +694,6 @@ footer {
 
   .sucess_mensage p {
     font-size: 14px;
-    font-style: normal;
     font-weight: 600;
     line-height: 22.5px;
     padding-right: 30px;
@@ -675,6 +706,24 @@ footer {
     gap: 10px;
     padding-bottom: 25px;
   }
+
+
+  /* FOOTER */
+
+footer{
+  position: relative;
+  z-index: 2;
+}
+  .rectangle_footer {
+    display: none;
+  }
+
+  .rectangle_footer_mobile {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+  }
+  
 
 
 

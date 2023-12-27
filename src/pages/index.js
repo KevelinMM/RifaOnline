@@ -1,5 +1,5 @@
 import Head from "next/head";
-import NavBar from "./components/Header";
+import Header from "./components/Header";
 import Home from "./components/Home";
 import Numbers from "./components/NumbersList";
 import About from "./components/About";
@@ -35,9 +35,9 @@ export default function Index() {
       </Head>
 
       <div className="homePage">
-        <NavBar handleClickLinks={handleClickLinks} />{" "}
+        <Header handleClickLinks={handleClickLinks} />
         <Home handleClickLinks={handleClickLinks} />
-        <Numbers handleClickLinks={handleClickLinks} /> <About />{" "}
+        <Numbers handleClickLinks={handleClickLinks} /> <About />
         <Footer handleClickLinks={handleClickLinks} />
       </div>
     </>

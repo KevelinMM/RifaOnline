@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import BuyNumber from "./BuyButton";
 
-export default function NavBar({handleClickLinks}) {
+export default function Header({handleClickLinks}) {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showBackdrop, setShowBackdrop] = useState(false);
 

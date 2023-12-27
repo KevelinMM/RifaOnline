@@ -41,8 +41,8 @@ const OpenIcon = (
       d="M18.5637 15.7185L14.0004 11.1758L9.43712 15.7185"
       stroke="#0A294C"
       strokeWidth="1.67421"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -61,8 +61,8 @@ const ClosedIcon = (
       d="M9.4364 12.2812L13.9997 16.8239L18.563 12.2812"
       stroke="#0A294C"
       strokeWidth="1.67421"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -107,7 +107,7 @@ export default function About() {
               <h4>{title}</h4>
               {openSections[index] ? OpenIcon : ClosedIcon}
             </div>
-            <Collapse in={openSections[index]} timeout="0" unmountOnExit>
+            <Collapse in={openSections[index]} unmountOnExit>
               <List component="div" disablePadding>
                 <p>{content}</p>
               </List>

@@ -23,16 +23,16 @@ const buyNumberSvg = (
     <path
       d="M21 7L7 21"
       stroke="#D9D9D9"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M7 7L21 21"
       stroke="#D9D9D9"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -48,16 +48,16 @@ const sucessMensageSvg = (
     <path
       d="M32.0547 16.1439V17.4844C32.0529 20.6264 31.0355 23.6836 29.1542 26.2001C27.273 28.7166 24.6286 30.5576 21.6156 31.4485C18.6025 32.3393 15.3823 32.2323 12.435 31.1435C9.48772 30.0546 6.97139 28.0422 5.26128 25.4064C3.55117 22.7706 2.73891 19.6526 2.94565 16.5174C3.15238 13.3822 4.36702 10.3979 6.40843 8.00945C8.44984 5.621 11.2086 3.95644 14.2734 3.264C17.3381 2.57157 20.5445 2.88837 23.4145 4.16715"
       stroke="#47A4F9"
-      stroke-width="1.55417"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.55417"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M32.0547 5.82825L17.4844 20.4131L13.1133 16.042"
       stroke="#47A4F9"
-      stroke-width="1.55417"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.55417"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

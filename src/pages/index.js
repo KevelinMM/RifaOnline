@@ -28,11 +28,12 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Nunito:wght@200;300;400;500&family=Rubik:wght@300&display=swap"
-          rel="stylesheet"
-        />
+
       </Head>
+
+      <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Nunito:wght@200;300;400;500&family=Rubik:wght@300&display=swap');
+      `}</style>
 
       <div className="homePage">
         <Header handleClickLinks={handleClickLinks} />

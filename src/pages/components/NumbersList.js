@@ -78,7 +78,7 @@ export default function Numbers() {
               <h4>R$5,00/número</h4>
             </div>
 
-            <li className="numbers">{renderNumberList()}</li>
+            <div className="numbers">{renderNumberList()}</div>
 
             <div className="numbers_footer">
               {selectedNumbers.length > 0 ? (

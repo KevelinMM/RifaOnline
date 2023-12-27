@@ -179,7 +179,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 88.5424 7.94165)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -187,7 +187,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 88.5424 18.3567)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -195,7 +195,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 88.5424 28.7697)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -203,7 +203,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 88.5424 39.1826)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -211,7 +211,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 83.3929 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -219,7 +219,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 71.3772 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -227,7 +227,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 59.3615 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -235,7 +235,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 47.3459 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -243,7 +243,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 35.3304 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -251,7 +251,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 23.3148 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -259,7 +259,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 11.2992 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -267,7 +267,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 172.559 7.94165)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -275,7 +275,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 172.559 18.3567)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -283,7 +283,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 172.559 28.7697)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -291,7 +291,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 172.559 39.1826)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -299,7 +299,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 167.409 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -307,7 +307,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 155.394 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -315,7 +315,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 143.378 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -323,7 +323,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 131.362 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -331,7 +331,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 119.347 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -339,7 +339,7 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 107.331 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
     <line
       y1="-0.239607"
@@ -347,12 +347,12 @@ const detailSvgMobile = (
       y2="-0.239607"
       transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 95.3157 45.135)"
       stroke="white"
-      stroke-width="0.479214"
+      strokeWidth="0.479214"
     />
   </svg>
 );
 
-export default function Home({handleClickLinks}) {
+export default function Home({ handleClickLinks }) {
   return (
     <>
       <img src="rectangle-home.png" className="retangle_home"></img>
@@ -395,31 +395,35 @@ export default function Home({handleClickLinks}) {
               </div>
             </div>
           </div>
+          <div>
+            <div className="student_card">
+              <div className="images_home">
+                <img
+                  className="banner_background_img"
+                  src="banner-background.png"
+                ></img>
 
-          <div className="student_card">
-            <div className="images_home">
-              <img
-                className="banner_background_img"
-                src="banner-background.png"
-              ></img>
+                <img
+                  className="banner_person_img"
+                  src="banner-person.png"
+                ></img>
+              </div>
 
-              <img className="banner_person_img" src="banner-person.png"></img>
+              <div className="detail_home">{detailSvg}</div>
+
+              <div className="detail_home_mobile">{detailSvgMobile}</div>
+
+              <svg
+                className="retangle_home_svg"
+                width="179"
+                height="65"
+                viewBox="0 0 179 65"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="179" height="65" rx="10" fill="#1C232B" />
+              </svg>
             </div>
-
-            <div className="detail_home">{detailSvg}</div>
-
-            <div className="detail_home_mobile">{detailSvgMobile}</div>
-
-            <svg
-              className="retangle_home_svg"
-              width="179"
-              height="65"
-              viewBox="0 0 179 65"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="179" height="65" rx="10" fill="#1C232B" />
-            </svg>
           </div>
         </div>
         <div id="premio" className="help_students">

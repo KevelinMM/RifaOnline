@@ -37,7 +37,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 142.857 12.0532)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -45,7 +45,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 142.857 28.9302)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -53,7 +53,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 142.857 45.8037)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -61,7 +61,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 142.857 62.6772)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -69,7 +69,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 134.512 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -77,7 +77,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 115.042 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -85,7 +85,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 95.5708 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -93,7 +93,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 76.1005 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -101,7 +101,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 56.6302 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -109,7 +109,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 37.1596 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -117,7 +117,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 17.6891 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -125,7 +125,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 279 12.0531)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -133,7 +133,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 279 28.9302)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -141,7 +141,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 279 45.8037)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -149,7 +149,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 279 62.6771)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -157,7 +157,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 270.656 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -165,7 +165,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 251.185 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -173,7 +173,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 231.714 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -181,7 +181,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 212.244 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -189,7 +189,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 192.774 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -197,7 +197,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 173.303 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
       <line
         y1="-0.388268"
@@ -205,7 +205,7 @@ const Sidebar = ({ show, closeSidebar }) => {
         y2="-0.388268"
         transform="matrix(-0.755689 -0.654931 0.755689 -0.654931 153.832 72.3226)"
         stroke="white"
-        stroke-width="0.776536"
+        strokeWidth="0.776536"
       />
     </svg>
   );
@@ -225,8 +225,8 @@ const Sidebar = ({ show, closeSidebar }) => {
           fill="none"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M0 0.999342C0 0.84066 0.129323 0.712023 0.28885 0.712023H1.51576C1.67529 0.712023 1.80462 0.84066 1.80462 0.999341V21.5911C1.80462 22.1216 2.23701 22.5517 2.7704 22.5517H4.98085V0.999342C4.98085 0.84066 5.11017 0.712023 5.2697 0.712023H6.49661C6.65614 0.712023 6.78546 0.84066 6.78546 0.999342V24.3468H2.40992C1.07896 24.3468 0 23.2735 0 21.9496L0 0.999342Z"
             fill="#EDF0F3"
           />
@@ -275,68 +275,68 @@ const Sidebar = ({ show, closeSidebar }) => {
             fill="#EDF0F3"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M38.1085 2.41514L40.1971 -3.36285e-05L40.5128 0.36499L38.4242 2.78016L38.1085 2.41514Z"
             fill="#EDF0F3"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M38.1088 5.79638L43.1215 -3.36285e-05L43.4371 0.36499L38.4244 6.1614L38.1088 5.79638Z"
             fill="#EDF0F3"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M38.1089 9.17762L46.0457 -3.36285e-05L46.3613 0.36499L38.4245 9.54265L38.1089 9.17762Z"
             fill="#EDF0F3"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M38.1085 12.5589L48.9694 -3.36285e-05L49.285 0.36499L38.4242 12.9239L38.1085 12.5589Z"
             fill="#EDF0F3"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M38.1086 15.9401L50.6404 1.44906L50.9561 1.81409L38.4243 16.3051L38.1086 15.9401Z"
             fill="#EDF0F3"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M38.1086 19.3213L50.6404 4.83029L50.9561 5.19531L38.4243 19.6863L38.1086 19.3213Z"
             fill="#EDF0F3"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M38.1086 22.7027L50.6404 8.21164L50.9561 8.57666L38.4243 23.0677L38.1086 22.7027Z"
             fill="#EDF0F3"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M39.3618 24.6348L50.6404 11.5929L50.9561 11.9579L39.6775 24.9998L39.3618 24.6348Z"
             fill="#EDF0F3"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M42.2859 24.6349L50.6404 14.9742L50.9561 15.3392L42.6015 24.9999L42.2859 24.6349Z"
             fill="#EDF0F3"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M45.2099 24.6346L50.6404 18.3552L50.9561 18.7202L45.5256 24.9997L45.2099 24.6346Z"
             fill="#EDF0F3"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M48.134 24.635L50.6404 21.7368L50.9561 22.1018L48.4497 25L48.134 24.635Z"
             fill="#EDF0F3"
           />
@@ -352,16 +352,16 @@ const Sidebar = ({ show, closeSidebar }) => {
             <path
               d="M21 7L7 21"
               stroke="#D9D9D9"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M7 7L21 21"
               stroke="#D9D9D9"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>

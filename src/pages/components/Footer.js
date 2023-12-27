@@ -9,8 +9,8 @@ export default function Footer({handleClickLinks}) {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M0 1.19914C0 1.00872 0.155187 0.854355 0.346621 0.854355H1.81892C2.01035 0.854355 2.16554 1.00872 2.16554 1.19914V25.9092C2.16554 26.5459 2.68441 27.062 3.32448 27.062H5.97702V1.19914C5.97702 1.00872 6.13221 0.854355 6.32364 0.854355H7.79594C7.98737 0.854355 8.14256 1.00872 8.14256 1.19914V29.2161H2.8919C1.29475 29.2161 0 27.9282 0 26.3395L0 1.19914Z"
         fill="#EDF0F3"
       />
@@ -59,68 +59,68 @@ export default function Footer({handleClickLinks}) {
         fill="#EDF0F3"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M45.7302 2.89817L48.2366 -4.03452e-05L48.6154 0.437988L46.109 3.33619L45.7302 2.89817Z"
         fill="#EDF0F3"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M45.7305 6.95566L51.7458 -4.03452e-05L52.1246 0.437988L46.1093 7.39368L45.7305 6.95566Z"
         fill="#EDF0F3"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M45.7307 11.0131L55.2548 -4.03452e-05L55.6336 0.437988L46.1095 11.4512L45.7307 11.0131Z"
         fill="#EDF0F3"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M45.7302 15.0706L58.7632 -4.03452e-05L59.142 0.437988L46.109 15.5087L45.7302 15.0706Z"
         fill="#EDF0F3"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M45.7303 19.1281L60.7685 1.73885L61.1473 2.17688L46.1091 19.5661L45.7303 19.1281Z"
         fill="#EDF0F3"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M45.7303 23.1856L60.7685 5.79635L61.1473 6.23438L46.1091 23.6236L45.7303 23.1856Z"
         fill="#EDF0F3"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M45.7303 27.2432L60.7685 9.85396L61.1473 10.292L46.1091 27.6812L45.7303 27.2432Z"
         fill="#EDF0F3"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M47.2342 29.5618L60.7685 13.9115L61.1473 14.3495L47.613 29.9998L47.2342 29.5618Z"
         fill="#EDF0F3"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M50.7431 29.5618L60.7685 17.969L61.1473 18.407L51.1219 29.9998L50.7431 29.5618Z"
         fill="#EDF0F3"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M54.252 29.5617L60.7685 22.0263L61.1473 22.4644L54.6308 29.9997L54.252 29.5617Z"
         fill="#EDF0F3"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M57.7608 29.5619L60.7685 26.0841L61.1473 26.5221L58.1397 29.9999L57.7608 29.5619Z"
         fill="#EDF0F3"
       />

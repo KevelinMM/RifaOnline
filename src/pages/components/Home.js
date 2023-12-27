@@ -1,5 +1,6 @@
 import BuyNumber from "./BuyButton";
 
+// Efeito slow quando clica em algum link
 const handleNavLinkClick = (event, targetId) => {
   event.preventDefault();
   const targetElement = document.getElementById(targetId);

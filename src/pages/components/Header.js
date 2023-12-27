@@ -16,6 +16,7 @@ export default function NavBar() {
     setShowBackdrop(false);
   };
 
+  // Efeito slow quando clica em algum link
   const handleNavLinkClick = (event, targetId) => {
     event.preventDefault();
     closeSidebar();

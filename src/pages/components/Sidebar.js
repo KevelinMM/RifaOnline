@@ -6,8 +6,10 @@ const Sidebar = ({ show, closeSidebar }) => {
     height: "100%",
     backgroundColor: "#1F2832",
     position: "fixed",
+    //Altura definida no css com base no tamanho da tela: .backdrop
   };
 
+  // Efeito slow quando clica em algum link
   const handleNavLinkClick = (event, targetId) => {
     event.preventDefault();
     closeSidebar();

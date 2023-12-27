@@ -1,6 +1,6 @@
 # RifaOnline
 
-Desafio
+Desafio UEEK:
 
 * Desenvolver a landing page de acordo com o layout proposto no Figma, com tipografia, cores e estrutura seguindo o mais próximo possível do documento.
 * O frontend deverá ser desacoplado do backend.

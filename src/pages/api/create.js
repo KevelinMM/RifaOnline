@@ -4,8 +4,6 @@ import prisma from "../../../libs/prisma";
 export default async function handler(req, res) {
   const body = req.body;
 
-  console.log(body);
-
   // Verificar se todos os numero solicitados estão disponiveis
   for (let i = 0; i < body.numerosId.length; i++) {
     const existeNumero = await prisma.numeros.findUnique({
@@ -25,15 +23,16 @@ export default async function handler(req, res) {
 
   let pessoaId;
 
-  //Verifica se o usuário ja existe pelo ceu CPF ou CNPJ, ,ou seja, se já realizou uma compra.
+  //Verificar se o usuário ja existe pelo ceu CPF ou CNPJ, se já realizou uma compra.
   const getPessoa = await prisma.pessoa.findUnique({
     where: { cpfCnpj: body.cpfCnpj },
   });
-  //Se existe, associa a compra o usuário
+
+  //Se já existe, associar a compra o usuário
   if (getPessoa) {
     pessoaId = getPessoa.id;
   } else {
-    //Se não, cria o usuário
+    //Se não, criar o usuário
     const newPessoa = await prisma.pessoa.create({
       data: {
         nome: body.nome,
@@ -52,7 +51,7 @@ export default async function handler(req, res) {
     pessoaId = newPessoa.id;
   }
 
-  // Associar o número da rifa a pessoa
+  // Associar o número da rifa ao usuário
   for (let i = 0; i < body.numerosId.length; i++) {
     await prisma.numeros.update({
       where: {

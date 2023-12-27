@@ -53,6 +53,7 @@ const Forms = ({ show, closeSidebar, selectedNumbers, resetNumbers }) => {
   };
 
   //Finalizando a compra dos números escolhidos
+  
   async function handleFinish() {
     setError(false);
     setMissingInfo(false);

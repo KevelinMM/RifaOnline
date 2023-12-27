@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import List from "@mui/material/List";
 import Collapse from "@mui/material/Collapse";
 
+// Lista "ABOUT"
 const sections = [
   {
     title: "Como funciona a compra?",
@@ -69,9 +70,15 @@ const ClosedIcon = (
 export default function About() {
   const [openSections, setOpenSections] = useState(sections.map(() => false));
 
+  // Função para lidar com a expansão e contração dos itens da lista "ABOUT"
   const handleClick = (index) => {
+    // O estado openSections mantém o controle de quais seções estão abertas ou fechadas.
     const newOpenSections = [...openSections];
+
+    // Alterna o valor do item clicado para o oposto do seu valor atual.
     newOpenSections[index] = !newOpenSections[index];
+
+    // Atualiza o estado openSections.
     setOpenSections(newOpenSections);
   };
 

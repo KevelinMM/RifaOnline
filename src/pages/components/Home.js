@@ -1,17 +1,5 @@
 import BuyNumber from "./BuyButton";
 
-// Efeito slow quando clica em algum link
-const handleNavLinkClick = (event, targetId) => {
-  event.preventDefault();
-  const targetElement = document.getElementById(targetId);
-  if (targetElement) {
-    targetElement.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-};
-
 const detailSvg = (
   <svg
     width="260"
@@ -364,7 +352,7 @@ const detailSvgMobile = (
   </svg>
 );
 
-export default function Home() {
+export default function Home({handleClickLinks}) {
   return (
     <>
       <img src="rectangle-home.png" className="retangle_home"></img>
@@ -399,7 +387,7 @@ export default function Home() {
                 <br></br>
                 <BuyNumber />
                 <a
-                  onClick={(e) => handleNavLinkClick(e, "about")}
+                  onClick={(e) => handleClickLinks(e, "about")}
                   className="button_transparent"
                 >
                   Sobre a rifa

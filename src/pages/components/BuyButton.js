@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function BuyNumber() {
+
+  //Deixa lento a rolagem da pagina até o campo "buy"
   const handleCompraClick = (event, targetId) => {
     event.preventDefault();
 
@@ -10,7 +12,7 @@ export default function BuyNumber() {
         behavior: "smooth",
         block: "start",
       });
-    }
+    } 
   };
 
   return (

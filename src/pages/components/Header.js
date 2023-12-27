@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import BuyNumber from "./BuyButton";
 
-export default function NavBar() {
+export default function NavBar({handleClickLinks}) {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showBackdrop, setShowBackdrop] = useState(false);
 
@@ -143,19 +143,6 @@ export default function NavBar() {
     setShowBackdrop(false);
   };
 
-  // Efeito slow quando clica em algum link
-  const handleNavLinkClick = (event, targetId) => {
-    event.preventDefault();
-    closeSidebar();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-
 
   return (
     <header>
@@ -164,15 +151,15 @@ export default function NavBar() {
       <div className="itens_header">
         <div className="links_header">
           <ul>
-            <a onClick={(e) => handleNavLinkClick(e, "connect")}>Início</a>
+            <a onClick={(e) => handleClickLinks(e, "connect")}>Início</a>
           </ul>
           <ul>
-            <a onClick={(e) => handleNavLinkClick(e, "about")}>
+            <a onClick={(e) => handleClickLinks(e, "about")}>
               Como funciona?
             </a>
           </ul>
           <ul>
-            <a onClick={(e) => handleNavLinkClick(e, "premio")}>Prêmio</a>
+            <a onClick={(e) => handleClickLinks(e, "premio")}>Prêmio</a>
           </ul>
         </div>
         <BuyNumber />

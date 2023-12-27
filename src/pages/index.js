@@ -6,6 +6,19 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 
 export default function Index() {
+  //Deixa lento a rolagem da pagina até o link clicado
+  const handleClickLinks = (event, targetId) => {
+    event.preventDefault();
+
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <>
       <Head>
@@ -22,8 +35,10 @@ export default function Index() {
       </Head>
 
       <div className="homePage">
-        <NavBar /> <Home />
-        <Numbers /> <About/> <Footer/>
+        <NavBar handleClickLinks={handleClickLinks} />{" "}
+        <Home handleClickLinks={handleClickLinks} />
+        <Numbers handleClickLinks={handleClickLinks} /> <About />{" "}
+        <Footer handleClickLinks={handleClickLinks} />
       </div>
     </>
   );

@@ -1,16 +1,4 @@
-export default function Footer() {
-  
-  // Efeito slow ao clicar nos links
-  const handleNavLinkClick = (event, targetId) => {
-    event.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
+export default function Footer({handleClickLinks}) {
 
   const ueekConnectFooter = (
     <svg
@@ -145,9 +133,9 @@ export default function Footer() {
       <footer>
         <div className="footer_logo">{ueekConnectFooter}</div>{" "}
         <div className="footer_links">
-          <a onClick={(e) => handleNavLinkClick(e, "connect")}>Inicio</a>
-          <a onClick={(e) => handleNavLinkClick(e, "about")}>Como funciona?</a>
-          <a onClick={(e) => handleNavLinkClick(e, "premio")}>Prêmio</a>
+          <a onClick={(e) => handleClickLinks(e, "connect")}>Inicio</a>
+          <a onClick={(e) => handleClickLinks(e, "about")}>Como funciona?</a>
+          <a onClick={(e) => handleClickLinks(e, "premio")}>Prêmio</a>
         </div>
         <img src="rectangle-footer.png" className="rectangle_footer"></img>
         <img

@@ -2,7 +2,7 @@ import React from "react";
 
 const Sidebar = ({ show, closeSidebar }) => {
   const sidebarStyles = {
-    width: "85%",
+    width: "80%",
     height: "100%",
     backgroundColor: "#1F2832",
     position: "fixed",

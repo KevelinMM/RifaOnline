@@ -29,14 +29,14 @@ const Forms = ({ show, closeSidebar, selectedNumbers, resetNumbers }) => {
   const [error, setError] = useState(false);
   const [missingInfo, setMissingInfo] = useState(false);
 
-  const sidebarStyles = {
-    width: "85%",
+  const sidebarFormStyles = {
     heigth: "100%",
     backgroundColor: "#1F2832",
     position: "fixed",
     overflowY: "auto",
     maxHeight: "100vh",
   };
+
 
   const commonInputStyle = {
     color: "white",
@@ -87,8 +87,8 @@ const Forms = ({ show, closeSidebar, selectedNumbers, resetNumbers }) => {
 
   return (
     <div
-      className="navigation_header"
-      style={show ? sidebarStyles : { display: "none" }}
+      className={`navigation_form large-screen`}
+      style={show ? sidebarFormStyles : { display: "none" }}
     >
       {" "}
       <div className="logo_sidebar">

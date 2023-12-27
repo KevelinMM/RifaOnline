@@ -1,5 +1,4 @@
 :root {
-  --color-white: #fff;
   --color-text: #edf0f3;
   --color-button: #47a4f9;
   --color-form: #9A9A9A;
@@ -10,18 +9,19 @@
 html,
 body {
   background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: Rubik;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  color: var(--color-text);
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: var(--color--text);
+a,
+button {
+  color: var(--color-text);
   cursor: pointer;
+  text-decoration: none;
 }
 
 header {
@@ -30,8 +30,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding: 3rem 7%;
-position: relative;
-z-index: 110;
+  position: relative;
+  z-index: 110;
 }
 
 .logo_header {
@@ -40,10 +40,10 @@ z-index: 110;
 }
 
 .itens_header {
+  align-items: center;
   display: flex;
   gap: 20px;
   justify-content: center;
-  align-items: center;
   position: relative;
 }
 
@@ -60,7 +60,6 @@ z-index: 110;
 
 .content {
   padding: 20px 7%;
-  transition: 1s;
   display: flex;
   flex-direction: column;
 }
@@ -74,30 +73,30 @@ z-index: 110;
 }
 
 .info_home {
-  width: 423px;
   height: 200px;
+  width: 423px;
 }
 
 .student_card {
   display: flex;
-  justify-content: end;
   height: 380px;
+  justify-content: end;
   padding-top: 8.5em;
 }
 
 .images_home {
-  display: flex;
-  position: absolute;
-  justify-content: center;
   align-items: end;
+  display: flex;
+  justify-content: center;
+  position: absolute;
 }
 
 
 .banner_background_img {
+  background-color: var(--color-background);
   display: flex;
   height: 330px;
   z-index: 4;
-  background-color: var(--color-background);
 }
 
 
@@ -107,10 +106,10 @@ z-index: 110;
 }
 
 .detail_home {
+  margin-right: -2.5em;
+  margin-top: 18.2em;
   position: absolute;
   z-index: 1;
-  margin-top: 18.2em;
-  margin-right: -2.5em;
 }
 
 .detail_home_mobile {
@@ -118,16 +117,15 @@ z-index: 110;
 }
 
 .info_tv {
-  width: 647px;
   height: 268px;
+  width: 647px;
 }
 
 .tv_image img {
-  max-width: 90%;
-  height: auto;
   display: block;
+  height: auto;
   margin: 0 0;
-
+  max-width: 90%;
 }
 
 .btn_icon_header {
@@ -148,19 +146,18 @@ z-index: 110;
 
 .button_transparent {
   background: transparent;
-  border: 0.757px solid #edf0f3;
+  border: 0.757px solid var(--color-text);
   border-radius: 50px;
-  color: var(----color-text);
   font-size: 14px;
   margin-left: 10px;
   padding: 11.869px 22px;
+
 }
 
 .button_buy {
   background: var(--color-button);
   border: none;
   border-radius: 75.301px;
-  color: var(----color-text);
   padding: 12px 13.554px;
 }
 
@@ -177,28 +174,29 @@ z-index: 110;
   background: #395A80;
   filter: blur(120px);
   height: 700px;
-  position: absolute;
   left: 850px;
+  position: absolute;
   top: 60em;
   width: 1065px;
   z-index: 1;
 }
 
 .buy {
+  padding-bottom: 5em;
   position: relative;
   z-index: 20;
-  padding-bottom: 5em;
+
 }
 
 .buy_numbers_home {
-  color: var(----color-text);
+  color: var(--color-text);
   font-size: 24px;
   font-weight: 600;
   padding-bottom: 29px;
 }
 
 .buy_numbers_home span {
-  color: #47A4F9;
+  color: var(--color-button);
 }
 
 
@@ -206,33 +204,29 @@ z-index: 110;
   background: var(--color-cards);
   border-radius: 10px;
   flex-shrink: 0;
-  padding: 25px;
   justify-content: center;
-  display: flex;
-  flex-direction: column;
-
+  padding: 25px;
 }
 
 .numbers {
   display: flex;
   flex-wrap: wrap;
+  justify-content: start;
   list-style: none;
   padding: 0;
-  justify-content: start;
-
 }
 
 .numbers li {
   align-items: center;
-  box-sizing: border-box;
   border-radius: 9.34px;
+  box-sizing: border-box;
   color: var(--color-text);
+  display: flex;
   justify-content: center;
   margin: 5px;
   padding: 5px 18px 6px 18px;
   text-align: center;
   width: calc(5% - 10px);
-  display: flex;
 }
 
 .numbers_available {
@@ -241,7 +235,6 @@ z-index: 110;
   cursor: pointer;
   display: flex;
   justify-content: center;
-
 }
 
 .numbers_unvailable {
@@ -256,24 +249,24 @@ z-index: 110;
 
 .numbers_selected {
   align-items: center;
+  background-color: var(--color-button);
   border: var(--color-button);
   display: flex;
   justify-content: center;
-  background-color: var(--color-button);
 }
 
 .button_number {
-  width: 283px;
-  height: 44px;
-  border-radius: 100px;
   background: #62686f;
   border: none;
+  border-radius: 100px;
+  height: 44px;
+  width: 283px;
 }
 
 .numbers_footer {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
   padding: 16px 18px;
 }
 
@@ -282,7 +275,6 @@ z-index: 110;
   background: var(--color-button);
   border: none;
   border-radius: 100px;
-  color: var(----color-text);
   display: flex;
   height: 44px;
   justify-content: center;
@@ -291,13 +283,8 @@ z-index: 110;
 
 .numbers_description {
   color: #62686f;
-  font-family: Rubik;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  text-align: right;
-
 }
 
 .studens_img {
@@ -325,16 +312,13 @@ z-index: 110;
   font-weight: 300;
   line-height: 22px;
   padding: 12px;
-  width: 100%;
   position: relative;
+  width: 100%;
   z-index: 10;
-
-
-
 }
 
 .about h4 {
-  color: #47A4F9;
+  color: var(--color-button);
   font-size: 18px;
   font-weight: 400;
   line-height: 120%;
@@ -344,23 +328,156 @@ z-index: 110;
   align-items: center;
   display: flex;
   justify-content: space-between;
-
-
 }
 
 .icon_about {
   background-color: var(--color-background);
 }
 
+/* Efeito quando mostra o formulário e sidebar mobile */
+.backdrop {
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.39);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 8;
+}
+
+
+/* FORM */
+
+.logo_sidebar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 12px;
+  padding-left: 15px;
+}
+
+.navigation_form {
+  animation-duration: 1s;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.navigation_form.large-screen {
+  width: 42%;
+}
+
+.form_sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form_main_data {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 14px;
+}
+
+.form_style {
+  padding: 0 26px;
+}
+
+.form_style p {
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.form_style h4 {
+  font-weight: 600;
+  line-height: 29px;
+}
+
+.address_style {
+  display: flex;
+  gap: 10px;
+}
+
+.form_sidebar input {
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: var(--color--text);
+  outline: none;
+  padding-bottom: 10px;
+  width: 80vw;
+}
+
+.form_sidebar label {
+  color: var(--color-form);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.price {
+  color: var(--color-button);
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  padding-top: 6px;
+}
+
+.sucess_mensage {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  padding-top: 35px;
+}
+
+.sucess_mensage p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22.5px;
+  padding-right: 30px;
+}
+
+.form_footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 25px;
+}
+
+
+.button_cancel_sidebar {
+  border: 0.757px solid var(--color-text);
+  border-radius: 100px;
+  align-items: center;
+  background: transparent;
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  width: 258px;
+}
+
+/* ESTILO DOS STEPS NO FORMS */
+
+.MuiStepLabel-label {
+  color: white !important;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20.8px;
+}
 
 /* FOOTER */
 
 footer {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 24px;
+  justify-content: center;
   padding: 35px;
 }
 
@@ -368,7 +485,6 @@ footer {
   display: flex;
   gap: 32px;
   z-index: 2;
-
 }
 
 .footer_logo {
@@ -392,10 +508,9 @@ footer {
 }
 
 
-
 @media screen and (max-width: 768px) {
-  /* HEADER */
 
+  /* HEADER */
 
   .content {
     padding: 20px;
@@ -405,16 +520,6 @@ footer {
     display: none;
   }
 
-  .backdrop {
-    background: rgba(0, 0, 0, 0.39);
-    backdrop-filter: blur(5px);
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 8;
-  }
 
   /* COMPONENTE SIDEBAR */
 
@@ -427,13 +532,6 @@ footer {
     z-index: 999;
   }
 
-  .logo_sidebar {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin: 25px 12px;
-    padding-left: 15px;
-  }
 
   .btn_icon_header {
     display: block;
@@ -454,19 +552,6 @@ footer {
     right: 0;
   }
 
-
-
-  .button_cancel_sidebar {
-    border: 0.757px solid #edf0f3;
-    border-radius: 100px;
-    color: var(----color-text);
-    align-items: center;
-    background: transparent;
-    display: flex;
-    height: 44px;
-    justify-content: center;
-    width: 258px;
-  }
 
   .detail_sidebar {
     display: fixed;
@@ -498,19 +583,19 @@ footer {
 
   .student_card {
     display: flex;
+    height: 236.135px;
+    justify-content: start;
     padding: 18px 1em;
     position: relative;
     width: 310px;
-    height: 236.135px;
-    justify-content: start;
   }
 
   .banner_person_img {
-    width: 189px;
     height: 222px;
     margin-top: 11px;
-    z-index: 3;
     position: relative;
+    width: 189px;
+    z-index: 3;
   }
 
 
@@ -520,11 +605,11 @@ footer {
 
 
   .detail_home_mobile {
+    display: flex;
     margin-left: 6em;
     margin-top: 13em;
     position: absolute;
     z-index: -2;
-    display: flex;
   }
 
   .retangle_home_svg {
@@ -553,9 +638,9 @@ footer {
   }
 
   .buy {
+    padding-bottom: 1em;
     position: relative;
     z-index: 20;
-    padding-bottom: 1em;
   }
 
   .numbers {
@@ -563,7 +648,6 @@ footer {
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
-
   }
 
   .numbers_content {
@@ -576,169 +660,63 @@ footer {
     width: calc(20% - 10px);
   }
 
-
-
   .button_number {
-    width: 283px;
-    height: 44px;
-    border-radius: 100px;
     background: #62686f;
     border: none;
+    border-radius: 100px;
+    height: 44px;
+    width: 283px;
   }
 
   .numbers_footer {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 16px 18px;
   }
 
   .numbers_description {
     color: #62686f;
-    font-family: Rubik;
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-align: right;
-
   }
 
   .studens_img {
+    display: flex;
     flex-shrink: 0;
     height: 100%;
     width: 100%;
-    display: flex;
   }
 
   .studens_img_pc {
     display: none;
   }
 
+  /* FORM */
 
-  /* FORMULÁRIO SIDEBAR */
-
-  .form_sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .form_main_data {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 14px;
-  }
-
-  .form_style {
-    padding: 0 26px;
-  }
-
-  .form_style p {
-    color: #EDF0F3;
-    font-family: Rubik;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 22px;
-  }
-
-  .form_style h4 {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 29px;
-  }
-
-  .address_style {
-    display: flex;
-    gap: 10px;
-  }
-
-  .form_sidebar input {
-    border: none;
-    border-bottom: 1px solid #fff;
-    color: var(--color--text);
-    outline: none;
-    padding-bottom: 10px;
-    width: 80vw;
-  }
-
-  .form_sidebar label {
-    color: var(--color-form);
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 300;
-  }
-
-  .price {
-    display: flex;
-    justify-content: space-between;
-    color: #47A4F9;
-    font-size: 14px;
-    font-weight: 600;
-    padding-bottom: 25px;
-    padding-top: 6px;
-
-  }
-
-
-  .sucess_mensage {
-    display: flex;
-    gap: 16px;
-    padding-top: 35px;
-    align-items: center;
-
-  }
-
-  .sucess_mensage p {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 22.5px;
-    padding-right: 30px;
-  }
-
-  .form_footer {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-bottom: 25px;
+  .navigation_form.large-screen {
+    width: 80%;
   }
 
 
   /* FOOTER */
 
-footer{
-  position: relative;
-  z-index: 2;
-}
+  footer {
+    position: relative;
+    z-index: 2;
+  }
+
   .rectangle_footer {
     display: none;
   }
 
   .rectangle_footer_mobile {
+    bottom: 0;
     display: flex;
     position: absolute;
-    bottom: 0;
   }
-  
-
-
-
-  /* ESTILO DOS STEPS NO FORMS */
-
-  .MuiStepLabel-label {
-    color: white !important;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20.8px;
-  }
-
-
-
 
 
 }

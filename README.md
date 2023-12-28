@@ -26,7 +26,7 @@ npm install
 
 3 - Execute as migrações para criar o banco de dados:
 
-npm run migrate
+npx prisma migrate dev --name init
 
 ----------------------------------------------------------------
 
@@ -48,5 +48,6 @@ Tecnologias Utilizadas
 * Linguagem: JavaScript
 * Bibliotecas: React (MUI)
 * Framework: Next.js
+* Banco de dados: sqlite
 
 Aproveite o projeto! Se houver algum problema ou dúvida, fico a disposição.

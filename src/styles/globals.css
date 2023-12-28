@@ -80,8 +80,8 @@ header {
 .student_card {
   display: flex;
   height: 380px;
-  justify-content: end;
-  padding-top: 8.5em;
+  width: 53vw;
+  padding: 8.5em 0 5em 1em;
 }
 
 .images_home {
@@ -89,27 +89,39 @@ header {
   display: flex;
   justify-content: center;
   position: absolute;
+  width: 53vw;
 }
 
+.retangle_home_svg {
+  display: none;
+}
 
 .banner_background_img {
   background-color: var(--color-background);
+  border-radius: 20px;
+  max-height: 100%; 
+  max-width: 100%; 
   display: flex;
-  height: 330px;
   z-index: 4;
 }
 
 
 .banner_person_img {
   position: absolute;
+  max-height: 130%; 
+  max-width: 100%; 
   z-index: 10;
 }
 
+.banner_person_mobile {
+  display: none;
+}
+
 .detail_home {
-  margin-right: -2.5em;
-  margin-top: 18.2em;
+  margin-right: -30em;
+  margin-bottom: -2.5em;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 }
 
 .detail_home_mobile {
@@ -503,8 +515,10 @@ footer {
 }
 
 .rectangle_footer {
-  position: absolute;
+  bottom: 0;
+  position: fixed !important;
   width: 100%;
+
 }
 
 .rectangle_footer_mobile {
@@ -591,15 +605,17 @@ footer {
     justify-content: start;
     padding: 18px 1em;
     position: relative;
-    width: 310px;
+    width: 22em;
+  }
+
+  .banner_person_mobile {
+    display: flex;
+    background-color: #1C232B;
+
   }
 
   .banner_person_img {
-    height: 222px;
-    margin-top: 11px;
-    position: relative;
-    width: 189px;
-    z-index: 3;
+display: none;
   }
 
 
@@ -617,6 +633,7 @@ footer {
   }
 
   .retangle_home_svg {
+    display: flex;
     margin-left: 4em;
     margin-top: 10.5em;
     position: absolute;

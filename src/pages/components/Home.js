@@ -407,9 +407,14 @@ export default function Home({ handleClickLinks }) {
                   className="banner_person_img"
                   src="banner-person.png"
                 ></img>
-              </div>
 
-              <div className="detail_home">{detailSvg}</div>
+                <img
+                  className="banner_person_mobile"
+                  src="banner-person-mobile.png"
+                ></img>
+
+                <div className="detail_home">{detailSvg}</div>
+              </div>
 
               <div className="detail_home_mobile">{detailSvgMobile}</div>
 
